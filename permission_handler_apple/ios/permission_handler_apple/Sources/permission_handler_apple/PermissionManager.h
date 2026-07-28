@@ -15,7 +15,6 @@
 #import "BluetoothPermissionStrategy.h"
 #import "ContactPermissionStrategy.h"
 #import "EventPermissionStrategy.h"
-#import "LocationPermissionStrategy.h"
 #import "MediaLibraryPermissionStrategy.h"
 #import "PermissionStrategy.h"
 #import "PhonePermissionStrategy.h"

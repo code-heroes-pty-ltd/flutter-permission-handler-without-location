@@ -100,11 +100,9 @@
         case PermissionGroupLocation:
         case PermissionGroupLocationAlways:
         case PermissionGroupLocationWhenInUse:
-            #if PERMISSION_LOCATION || PERMISSION_LOCATION_WHENINUSE || PERMISSION_LOCATION_ALWAYS
-            return [[LocationPermissionStrategy alloc] initWithLocationManager];
-            #else
-            return [LocationPermissionStrategy new];
-            #endif
+            // return unknown for any location permission to prevent it being added automatically to
+            // iOS build artefacts that cause it to be flagged as an entitlement used in DLA
+            return [UnknownPermissionStrategy new];
         case PermissionGroupMediaLibrary:
             return [MediaLibraryPermissionStrategy new];
         case PermissionGroupMicrophone:
