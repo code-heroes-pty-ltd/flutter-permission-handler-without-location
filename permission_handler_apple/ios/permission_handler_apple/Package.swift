@@ -118,19 +118,6 @@ let permissionDefines: [CSetting] = [
     .define("PERMISSION_PHOTOS_ADD_ONLY",
             to: enabled("PERMISSION_PHOTOS_ADD_ONLY",
                         plistKeys: "NSPhotoLibraryAddUsageDescription")),
-    // dart: PermissionGroup.location / locationAlways / locationWhenInUse
-    .define("PERMISSION_LOCATION",
-            to: enabled("PERMISSION_LOCATION",
-                        plistKeys: "NSLocationWhenInUseUsageDescription",
-                                   "NSLocationAlwaysAndWhenInUseUsageDescription")),
-    // dart: PermissionGroup.locationWhenInUse (only when locationAlways is NOT needed)
-    .define("PERMISSION_LOCATION_WHENINUSE",
-            to: enabled("PERMISSION_LOCATION_WHENINUSE",
-                        plistKeys: "NSLocationWhenInUseUsageDescription")),
-    // dart: PermissionGroup.locationAlways
-    .define("PERMISSION_LOCATION_ALWAYS",
-            to: enabled("PERMISSION_LOCATION_ALWAYS",
-                        plistKeys: "NSLocationAlwaysAndWhenInUseUsageDescription")),
     // dart: PermissionGroup.notification (no required Info.plist key — enabled by default)
     .define("PERMISSION_NOTIFICATIONS",
             to: enabled("PERMISSION_NOTIFICATIONS", defaultValue: "1")),
